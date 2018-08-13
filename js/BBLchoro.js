@@ -286,7 +286,7 @@ var stateid = ["all"];
 var ifstateall = true;
 var dict = [];
 var rowCells= new Array();
-
+console.log("ffffffffffffff");
 function countstates(data) {
   
   
