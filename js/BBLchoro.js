@@ -288,7 +288,7 @@ var dict = [];
 var rowCells= new Array();
 
 function countstates(data) {
-   console.log("aaaaaaaaaaaaaaaaaaa");
+  
   
   document.getElementById("chorotitle2").innerHTML = "";
 	document.getElementById("table3").innerHTML = "";
@@ -660,6 +660,7 @@ dictstateenc = ordered4;
 });
 console.log("a");
 console.log(sortedyear1.year);
+console.log(sortedyear1[0]);
 console.log("b");
   var table = '<table>';
 	  table += '<thead>';
