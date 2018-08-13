@@ -702,6 +702,9 @@ window.confirm = function(message, title, yes_label, callback) {
   <!-- BEGIN USGS Footer Template -->
 
 <footer class="footer">
+	<cfif cgi.SERVER_NAME eq "webdev.er.usgs.gov" or Left(cgi.script_name,8) eq "/testing" >
+	   <div  style="height:10px; position:relative;background:blue;"></div>  
+   </cfif>
 	<div class="tmp-container">
 		<!-- .footer-wrap -->
 			<!-- .footer-doi -->
