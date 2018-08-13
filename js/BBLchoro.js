@@ -285,8 +285,7 @@ var yearvar2="2018"
 var stateid = ["all"];
 var ifstateall = true;
 var dict = [];
-var rowCells= new Array();
-console.log("ffffffffffffff");
+
 function countstates(data) {
   
   
@@ -660,7 +659,7 @@ dictstateenc = ordered4;
 });
 console.log("a");
 console.log(sortedyear1.year);
-console.log(sortedyear1[0]);
+console.log(sortedyear1[0].year);
 console.log("b");
   var table = '<table>';
 	  table += '<thead>';
