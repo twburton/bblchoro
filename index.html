@@ -59,20 +59,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Bird Banding Laboratory</title>-->
  
  
- <link href="/css/common.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="/css/custom.css" rel="stylesheet" type="text/css" media="screen" />
+ <link href="css/common.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/custom.css" rel="stylesheet" type="text/css" media="screen" />
  
- <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
-<link href="/css/bootstrap-grid.css" rel="stylesheet" type="text/css" />
-<link href="/css/bootstrap-sortable.css" rel="stylesheet" type="text/css">
+ <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap-sortable.css" rel="stylesheet" type="text/css">
 
-<script src="/js/jquery-3.1.0.min.js"></script>
-<script src="/js/jquery.smartmenus.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/bootstrap-sortable.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.smartmenus.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bootstrap-sortable.js"></script>
 
-<link href="/css/jquery-confirm.min.css" rel="stylesheet" type="text/css">
-<script src="/js/jquery-confirm.min.js"></script>
+<link href="css/jquery-confirm.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-confirm.min.js"></script>
 
 <title>Bird Banding Laboratory</title>
  
@@ -587,8 +587,9 @@ window.confirm = function(message, title, yes_label, callback) {
 function getCounts()
 		{
 		$.ajax({
-  url: 'https://webdev.er.usgs.gov/BBL/int_maps/pages/bbldata.csv',
-  //url: 'K:/BBL/int_maps/pages/index.html',
+        url: 'bbldata.csv',
+  //url: 'https://webdev.er.usgs.gov/BBL/int_maps/pages/bbldata.csv',
+  //url: 'K:/BBL/int_maps/pages/bbldata.csv',
   dataType: 'text',
 }).done(countstates);
 		
