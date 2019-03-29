@@ -396,7 +396,7 @@ function countstates(data) {
 		dict[rowCells[0].toString()]=Number(rowCells[5]);
 		
 		year1.push({
-			birds: Number(rowCells[5]),birdsenc: Number(rowCells[6]), year: rowCells[4],
+			birds: Number(rowCells[5]), year: rowCells[4],
 			 sortable: true,
 			resizeable: true
 	});
@@ -406,7 +406,7 @@ function countstates(data) {
 			dict[rowCells[0].toString()]+=Number(rowCells[5]);
 			
 			year1.push({
-			birds: Number(rowCells[5]),birdsenc: Number(rowCells[6]), year: rowCells[4],
+			birds: Number(rowCells[5]), year: rowCells[4],
 			 sortable: true,
 			resizeable: true
 	});
@@ -491,7 +491,7 @@ function countstates(data) {
 		dict[rowCells[0].toString()]=Number(rowCells[5]);
 		
 		year1.push({
-			birds: Number(rowCells[5]),birdsenc: Number(rowCells[6]), year: rowCells[4],
+			birds: Number(rowCells[5]), year: rowCells[4],
 			 sortable: true,
 			resizeable: true
 	});
@@ -501,7 +501,7 @@ function countstates(data) {
 			dict[rowCells[0].toString()]+=Number(rowCells[5]);
 			
 			year1.push({
-			birds: Number(rowCells[5]),birdsenc: Number(rowCells[6]), year: rowCells[4],
+			birds: Number(rowCells[5]), year: rowCells[4],
 			 sortable: true,
 			resizeable: true
 	});
@@ -582,7 +582,7 @@ function countstates(data) {
 		dict[rowCells[0].toString()]=Number(rowCells[5]);
 		
 		year1.push({
-			birds: Number(rowCells[5]),birdsenc: Number(rowCells[6]), year: rowCells[4],
+			birds: Number(rowCells[5]), year: rowCells[4],
 			 sortable: true,
 			resizeable: true
 	});
@@ -593,7 +593,7 @@ function countstates(data) {
 			//console.log(rowCells[5]);
 			//console.log("four:"+rowCells[4]); test1
 			year1.push({
-			birds: Number(rowCells[5]),birdsenc: Number(rowCells[6]), year: rowCells[4],
+			birds: Number(rowCells[5]), year: rowCells[4],
 			 sortable: true,
 			resizeable: true
 	});
@@ -760,11 +760,10 @@ table +='</div>';
    table += '<tr>';
   table+='<td title="Banded and encounter data" id="heading" colspan="2"><b>US/Canada</b></td>';
   table += '</tr>';
-	
+	  table += '</thead>';
 table += '<th>';
       table += '<td>';
-
-   table+= 'State';
+   table+= "State";
       table += '</td>';
       table += '</th>';
       table += '<th>';
@@ -777,7 +776,7 @@ table += '<th>';
    table+= "Encountered (from any state)";
       table += '</td>';
        table += '</th>';
-table += '</thead>';
+
 
    
    //table += '<tbody>';
@@ -807,7 +806,7 @@ table += '<thead>';
  table += '<tr>';
   table+='<td id="heading2" colspan="2"><b>All countries</b></td>'
   table += '</tr>';
-	  
+	  table += '</thead>';
 table += '<th>';
       table += '<td>';
    table+= "Country";
@@ -823,7 +822,6 @@ table += '<th>';
    table+= "Encountered (from any state)";
       table += '</td>';
        table += '</th>';
-       table += '</thead>';
        
   Object.keys(dictstateband).forEach(function(key) {
   table += '<tr class="rowson2">';
@@ -954,7 +952,7 @@ var sortedyear1 = Array.from(uniq).map(e => JSON.parse(e));
    table += '</th>';
     table += '<th>';
       table += '<td>';
-   table+= "Encountered (from any state)";
+   table+= "encounters";
       table += '</td>';
    table += '</th>';
    table += '</tr>';
@@ -978,7 +976,7 @@ var sortedyear1 = Array.from(uniq).map(e => JSON.parse(e));
    table += '</th>';
    table += '<th>';
    table += '<td>';
-   encounternum3=sortedyear1[i].birdsenc.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+   encounternum3=""//dictstateenc[key].toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
    table+= encounternum3;
     table += '</td>';
    table += '</th>';
